@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.morlicando.d"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="Red evening" >
+              <service
+            android:label="Red evening"
+            android:name="WallpaperActivity"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+            <meta-data android:name="android.service.wallpaper" android:resource="@xml/manoxml" />
+        </service>
+
+   		
+        		
+    </application>
+	<uses-feature android:name="android.software.live_wallpaper"
+		android:required="true"></uses-feature>
+	<uses-sdk android:minSdkVersion="8" />
+</manifest>
